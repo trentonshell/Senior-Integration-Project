@@ -56,80 +56,67 @@ The more the end user is required to use some particular piece of software, the 
 
 \section{Background}
 
-\subsection{History}
-
-The history of the user interface has been a progression of computers becoming more accommodating for humans. Every interface with machines before the 1970s required humans to accommodate for the machine, since the bottleneck up to that point was the processor overhead. Typically the way input was read into the machine was by means of punch cards, with turnaround time for any specific job lasting hours or days. This meant that there was no real-time response. Monitor programs (a precursor to modern operating systems) meant for catching errors and giving more timely feedback became the first real hint at the purpose that user interfaces could serve.
-
-While professional computer usage transitioned to CLIs, a lot of research was going into making computers usable to a wider audience. Doug Engelbart demonstrated his ``oN-Line System'' in 1968, which uses a mouse, pointers, hypertext, and multiple windows. Researchers at Xerox Palo Alto developed the WIMP paradigm (Windows, Icons, Menus, Pointers) two years later, and released the first consumer-available GUI in its Xerox Alto machine (which ended up being a commercial failure due to its expense and lack of programs). The GUI wasn't popularized for another decade until the Apple Macintosh in 1984, after which Windows began providing it in MS-DOS. Evolutionary developments in the GUI continued throughout the next few years across all major companies, often borrowing ideas from each to make their interface more user-friendly and intuitive (as well as increasing their product differentiation in the marketplace).
-
-The most disruptive innovations in the history of UI have likely been the popularization of multitouch interfaces with the iPhone in 2007 and the proliferation of web apps utilizing HTML5 and JavaScript standards. The former made designing UI for mobile usage more important than ever before, while the latter allowed sites to make their front-facing client pages more interactive and platform independent. We are now seeing technology being integrated even further into everyone's lives with home assistants like Amazon's Alexa and wearables like the Apple Watch. Every new technology brings a new interface to interact with, and with it some preliminary assumptions regarding its usage. The job of the UI designer from the CLI to the GUI (and beyond) has been to guide the end user in everything they do.
-
 \subsection{Definitions}
 
 Design is ``the conscious and intuitive effort to impose meaningful order,'' according to industrial designer Victor Papanek \cite[p.~12]{cooper_reimann_cronin_2014}. It is the process of understanding the motivation and context of the end user, in knowing their constraints and requirements, and in using this knowledge to create a product, service, or environment that meets those needs. In fields related to UI design, there is often some confusion in terminology, especially between user interface and user experience. While there is some overlap, it is helpful to distinguish these.
 
-• User experience (UX) is simply the way users experience the world, our environment, or a product or service.
-
-• User interface (UI) is the space where interactions between humans and machines occur, bringing together interaction design and information architecture.
+\begin{itemize}
+\raggedright
+    \item User experience (UX) is simply the way users experience the world, our environment, or a product or service.
+    \item User interface (UI) is the space where interactions between humans and machines occur, bringing together interaction design and information architecture.
+\end{itemize}
 
 UI has further classification, such as composite user interfaces (CUI) which are UIs that interact with two are more senses. When talking about UIs most people primarily consider graphical user interfaces (GUI), which are CUIs composed of tactile and visual components. CUIs are now even further subdivided into categories standard, virtual, and augmented. The scope of this paper will primarily cover standard GUIs, since the vast majority of attention in the field is given to visual interface design (and as a result many good and bad examples of GUIs can be found to help the discussion here). Most fundamental principles will transfer over when designing for non-visual and non-standard UIs as well.
 
 The following are a few other terms that will be referenced throughout:
 
-• Usability is the measure of ease and learnability of an interface.
-
-• Human-computer interaction (HCI) is a field of research that explores new ways in
-which humans use computers.
-
-• User-centered design (UCD) is a widely practiced design philosophy that focuses on
-optimizing the product around how users can, want, or need to use the product, instead of requiring the user to change their behavior to accommodate the product.
+\begin{itemize}
+\raggedright
+    \item Usability is the measure of ease and learnability of an interface.
+    \item Human-computer interaction (HCI) is a field of research that explores new ways in which humans use computers.
+    \item User-centered design (UCD) is a widely practiced design philosophy that focuses on optimizing the product around how users can, want, or need to use the product, instead of requiring the user to change their behavior to accommodate the product.
+\end{itemize}
 
 \subsection{Principles}
 
 In The Design of Everyday Things, Don Norman (a pioneer in HCI) states that the two most important characteristics of good design are discoverability and understanding \cite[p.~3]{norman_2013}. Discoverability is what makes the end user able to figure out which actions are possible and how to perform them. It is the result of applying specific psychological concepts to the design process: affordances, signifiers, mappings, and feedback. Understanding gives the user context for what those actions will do, as well as the informing them about proper usage, and is provided by a conceptual model of the system. We shall quickly give a definition for each of these principles:
 
-• Affordances are relationships between the properties of an object and the capabilities of the agent. Example: A file system affords text search and, therefore, affords searching.
- 
-• Signifiers are contextual clues that communicate where the action should take place. Example: A magnifying glass icon signifies a searching affordance.
-
-• Mapping is the relationship between the system's controls, actions, and intended results. The goal is to reduce the need for any memorization to perform a task. An example might be a carousel with arrows to scroll right or left through a series of images.
-
-• Feedback is the system communicating the results of an action back to the user. It must be immediate, informative, and unobtrusive. Good example of UI feedback can be seen by progress bars, input validation, and subtle animations.
-
-• Conceptual models are simplified explanations of how a system works. These conceptualizations are created from the previous principles, and allow the end user to predict the effects of their actions. They often utilize analogies to real-world objects, such as the folder and desktop analogies for file directories.
+\begin{itemize}
+\raggedright
+    \item Affordances are relationships between the properties of an object and the capabilities of the agent. Example: A file system affords text search and, therefore, affords searching.
+    \item Signifiers are contextual clues that communicate where the action should take place. Example: A magnifying glass icon signifies a searching affordance.
+    \item Mapping is the relationship between the system's controls, actions, and intended results. The goal is to reduce the need for any memorization to perform a task. An example might be a carousel with arrows to scroll right or left through a series of images.
+    \item Feedback is the system communicating the results of an action back to the user. It must be immediate, informative, and unobtrusive. Good example of UI feedback can be seen by progress bars, input validation, and subtle animations.
+    \item Conceptual models are simplified explanations of how a system works. These conceptualizations are created from the previous principles, and allow the end user to predict the effects of their actions. They often utilize analogies to real-world objects, such as the folder and desktop analogies for file directories.
+\end{itemize}
 
 These generalized concepts can be applied to nearly any designed product or service, not just computer interfaces, but they must be fundamentally understood and applied before any software-specific principles. Ultimately, all software is created to serve its end users, and so UCD is an important place to start.
 
 Steve Krug is a usability consultant who specializes in HCI and web interfaces. In his well known book Don't Make Me Think, he outlines many guiding principles for creating intuitive and well-designed websites. Although the book is aimed at web and mobile usability, much of what he says can be used as principles for general UI design (this becomes especially true as software tends to move to the web):
 
-• Don't make me think: The titular and overriding principle, the interface should be as self- explanatory and obvious as humanely possible. ``It doesn't matter how many times I have to click as long as each click is a mindless, unambiguous choice \cite[p.~43]{krug_2014}.''
-
-• Don't waste my time: Much of software use is motivated by the desire to save time. Users tend not thoroughly read, but scan over options as quickly as possible. Additionally, users are often in a hurry and will forego making the best choice for making the first reasonable choice (a strategy Krug refers to as ``satisficing'').
-
-• There is no average user: All users are unique and software usage is basically idiosyncratic. Designing is not about finding what the simple ``right'' answers are, but carefully thinking out, executing, and thoroughly testing a solution that fills a need.
-
-• Clear and simple navigation is essential: Users form mental maps when navigating multi-page interfaces, and it is very important to help give a sense of scale, direction, and location to guide them where they want to go.
+\begin{itemize}
+\raggedright
+    \item Don't make me think: The titular and overriding principle, the interface should be as self- explanatory and obvious as humanely possible. ``It doesn't matter how many times I have to click as long as each click is a mindless, unambiguous choice \cite[p.~43]{krug_2014}.''
+    \item Don't waste my time: Much of software use is motivated by the desire to save time. Users tend not thoroughly read, but scan over options as quickly as possible. Additionally, users are often in a hurry and will forego making the best choice for making the first reasonable choice (a strategy Krug refers to as ``satisficing'').
+    \item There is no average user: All users are unique and software usage is basically idiosyncratic. Designing is not about finding what the simple ``right'' answers are, but carefully thinking out, executing, and thoroughly testing a solution that fills a need.
+    \item Clear and simple navigation is essential: Users form mental maps when navigating multi-page interfaces, and it is very important to help give a sense of scale, direction, and location to guide them where they want to go.
+\end{itemize}
 
 These two sets of UCD concepts and usability principles will prove helpful in guiding ethical decision-making in UI Design. Before leaving this section, we should outline what specific qualities should be shared among all well-designed interfaces. These can all be derived to one or more of the previously defined principles.
 
 User Interfaces should be:
 
-• Clear: Every action and state should be unambiguous through language, visual hierarchy,
-metaphor, or program flow. Implementation involve utilizing signifiers.
-
-• Concise: Design should be as minimal as is useful (though not as minimal as possible). Finding the optimal balance of clarity and concision is a central challenge in UI.
-
-• Consistent: Design elements should not change, and novelty should be minimized. Also called the principle of least astonishment. Consistency allows users to recognize patterns in the interface, fulfilling the ``don't make me think'' principle.
-
-• Responsive: Every action should give feedback as quickly as possible, if not immediate. A responsive interface respects the ``don't waste my time'' principle.
-
-• Efficient: Design of the interface should contribute to the end user's productivity. It should reflect the principle of least effort: people will do the least amount of work to get something done. Making a system efficient requires considering the affordances each end user could utilize (as well as recognizing the diversity in the user base).
-
-• Familiar: The interface should as a whole should be recognizable enough for a brand-new user to feel comfortable with the program. Proper use of mapping and signifiers can give new users a good conceptual model of how the system works.
-
-• Forgiving: Performing actions within a program should never be punitive. Assume that the end user will make mistakes, and provide remedies for human error at every state. Giving the user a chance to try things out without consequences will give them confidence when using the program.
-
-• Attractive: The interface should be as aesthetically pleasing as the other criteria permit. Making the program look and feel good adds to the user's enjoyment when using it. Unfortunately, this characteristic of UI is often taken as either the most important (e.g. macOS), or not important at all (e.g. Linux).
+\begin{itemize}
+\raggedright
+    \item Clear: Every action and state should be unambiguous through language, visual hierarchy, metaphor, or program flow. Implementation involve utilizing signifiers.
+    \item Concise: Design should be as minimal as is useful (though not as minimal as possible). Finding the optimal balance of clarity and concision is a central challenge in UI.
+    \item Consistent: Design elements should not change, and novelty should be minimized. Also called the principle of least astonishment. Consistency allows users to recognize patterns in the interface, fulfilling the ``don't make me think'' principle.
+    \item Responsive: Every action should give feedback as quickly as possible, if not immediate. A responsive interface respects the ``don't waste my time'' principle.
+    \item Efficient: Design of the interface should contribute to the end user's productivity. It should reflect the principle of least effort: people will do the least amount of work to get something done. Making a system efficient requires considering the affordances each end user could utilize (as well as recognizing the diversity in the user base).
+    \item Familiar: The interface should as a whole should be recognizable enough for a brand-new user to feel comfortable with the program. Proper use of mapping and signifiers can give new users a good conceptual model of how the system works.
+    \item Forgiving: Performing actions within a program should never be punitive. Assume that the end user will make mistakes, and provide remedies for human error at every state. Giving the user a chance to try things out without consequences will give them confidence when using the program.
+    \item Attractive: The interface should be as aesthetically pleasing as the other criteria permit. Making the program look and feel good adds to the user's enjoyment when using it. Unfortunately, this characteristic of UI is often taken as either the most important (e.g. macOS), or not important at all (e.g. Linux).
+\end{itemize}
 
 These qualities are not exhaustive, but they cover most of the ways designers optimize UI and categorize patterns. All of them appeal to some ethical value in both the developer and the user. We will now look at how those ethical values can be utilized from examples of UI most people interact with every day.
 
@@ -197,11 +184,7 @@ The following examples of dark patterns are not an exhaustive list, but should b
 
 Bait and switch is when a user sets out to do something and a different (usually undesirable) thing happens instead. A clear example of this pattern is given on Brignull's website: Microsoft's attempt to get its customers to upgrade their operating system to Windows 10 in 2016. Essentially, they alerted the user of the update in a normal pop-up window, but changed the behavior of the window so that clicking the ``close'' window button actually agrees to the upgrade. This modification occurred without any change in wording on the dialog box \cite{thurrott_2016}. Even Microsoft itself said that it ``went too far'' with these aggressive updates and two weeks later sent a patch to correct the dialog box behavior \cite{popa_2016}.
 
-There are a multitude of serious consequences with bait and switch, one of which is
-simply the loss of trust in users. It violates the principles of least astonishment and least effort, is
-unclear and unforgiving, and wastes the user's time and energy. Intentionally deceiving the user
-is ethically dubious even for web design where customers have a multitude of other options, but
-is absolutely indefensible for basic operating system functionality users are dependent upon.
+There are a multitude of serious consequences with bait and switch, one of which is simply the loss of trust in users. It violates the principles of least astonishment and least effort, is unclear and unforgiving, and wastes the user's time and energy. Intentionally deceiving the user is ethically dubious even for web design where customers have a multitude of other options, but is absolutely indefensible for basic operating system functionality users are dependent upon.
 
 \subsubsection{Roach Motel}
 
